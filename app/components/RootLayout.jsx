@@ -13,6 +13,7 @@ import Offices from "@/app/components/Offices";
 import SocialMedia from "@/app/components/SocialMedia";
 import Footer from "@/app/components/Footer";
 
+
 const Header = ({
   panelId,
   invert = false,
@@ -21,16 +22,30 @@ const Header = ({
   onToggle,
   toggleRef,
 }) => {
-  // Container
   return (
     <Container>
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Built X</Logo>
+        <Link href="/" aria-label="Home" className="flex flex-col leading-none">
+          <span
+            className={clsx(
+              "text-xs italic tracking-wide",
+              invert ? "text-white" : "text-black"
+            )}
+          >
+            THE
+          </span>
+          <span className="text-2xl font-semibold italic text-yellow-500">
+            SOCIAL EDIT
+          </span>
         </Link>
-        <div className="flex items-center gap-x-8">
-          <Button href={"/contact"} invert={invert}>
+
+        {/* Actions */}
+        <div className="flex items-center gap-x-6">
+          <Button
+            href="/contact"
+            className="bg-black text-white hover:bg-yellow-500 hover:text-black"
+          >
             Contact us
           </Button>
           <button
@@ -39,18 +54,16 @@ const Header = ({
             onClick={onToggle}
             aria-expanded={expanded.toString()}
             aria-controls={panelId}
-            className={clsx(
-              "group -m-2.5 rounded-full p-2.5 transition",
-              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
-            )}
             aria-label="Toggle navigation"
+            className={clsx(
+              "-m-2.5 rounded-full p-2.5 transition",
+              invert ? "hover:bg-white/10" : "hover:bg-black/10"
+            )}
           >
             <Icon
               className={clsx(
                 "h-6 w-6",
-                invert
-                  ? "fill-white group-hover:fill-neutral-200"
-                  : "fill-neutral-950 group-hover:fill-neutral-700"
+                invert ? "fill-white" : "fill-black"
               )}
             />
           </button>
@@ -59,9 +72,12 @@ const Header = ({
     </Container>
   );
 };
+
+/* ---------------- NAVIGATION ---------------- */
+
 const NavigationRow = ({ children }) => {
   return (
-    <div className="even:mt-px sm:bg-neutral-950">
+    <div className="border-t border-yellow-500/20">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -73,17 +89,20 @@ const NavigationItem = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className="group relative flex items-center
+                 text-white transition
+                 hover:text-yellow-400
+                 sm:px-16 sm:py-20"
     >
-      {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      {/* Text */}
+      <span className="relative z-10">{children}</span>
     </Link>
   );
 };
 
 const Navigation = () => {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="font-display text-5xl font-medium tracking-tight bg-black">
       <NavigationRow>
         <NavigationItem href="/work">Our Work</NavigationItem>
         <NavigationItem href="/about">About Us</NavigationItem>
@@ -115,38 +134,38 @@ const RootLayoutInner = ({ children }) => {
       window.removeEventListener("click", onClick);
     };
   }, []);
-  return (
+ return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
+        {/* Top Header */}
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          className="absolute left-0 right-0 top-2 z-40 pt-14 bg-white"
           aria-hidden={expanded ? "true" : undefined}
           inert={expanded ? "" : undefined}
         >
-          {/* Header */}
           <Header
             panelId={panelId}
             icon={HiMenuAlt4}
             toggleRef={openRef}
             expanded={expanded}
             onToggle={() => {
-              setExpanded((expanded) => !expanded);
-              window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true })
-              );
+              setExpanded((v) => !v);
+              setTimeout(() => closeRef.current?.focus(), 0);
             }}
           />
         </div>
+
+        {/* Menu Panel */}
         <motion.div
           layout
           id={panelId}
           style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          className="relative z-50 overflow-hidden bg-black pt-2"
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
         >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+          <motion.div layout className="bg-black">
+            <div className="pb-16 pt-14">
               <Header
                 invert
                 panelId={panelId}
@@ -154,29 +173,30 @@ const RootLayoutInner = ({ children }) => {
                 toggleRef={closeRef}
                 expanded={expanded}
                 onToggle={() => {
-                  setExpanded((expanded) => !expanded);
-                  window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true })
-                  );
+                  setExpanded((v) => !v);
+                  setTimeout(() => openRef.current?.focus(), 0);
                 }}
               />
             </div>
+
             {/* Navigation */}
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+
+            {/* Footer Info */}
+            <div className="bg-black border-t border-yellow-500/20">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-white">
+                  {/* <div>
+                    <h2 className="text-base font-semibold text-white">
                       Our offices
                     </h2>
                     <Offices
                       invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
+                  </div> */}
+                  <div className=" sm:border-yellow-500/20 sm:pl-16">
+                    <h2 className="text-base font-semibold text-white">
                       Follow us
                     </h2>
                     <SocialMedia className="mt-6" invert />
@@ -187,17 +207,15 @@ const RootLayoutInner = ({ children }) => {
           </motion.div>
         </motion.div>
       </header>
+
+      {/* Page Body */}
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
-        <motion.div
-          layout
-          className="relative isolate flex w-full flex-col pt-9"
-        >
+        <motion.div layout className="flex w-full flex-col pt-9">
           <main className="w-full flex-auto">{children}</main>
-          {/* Footer */}
           <Footer />
         </motion.div>
       </motion.div>

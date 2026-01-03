@@ -1,12 +1,12 @@
-import { SocialMediaProfiles } from "../components/SocialMedia";
+// import { SocialMediaProfiles } from "../components/SocialMedia";
 
 export const navigation = [
   {
-    title: "Work",
+    title: "Quick Links",
     links: [
-      { title: "Amazon Clone", href: "/work/amazonclone" },
-      { title: "Bazar e-commerce", href: "/work/bazar" },
-      { title: "Blog 101", href: "/work/blog101" },
+      { title: "About Us", href: "" },
+      { title: "Services", href: "" },
+      { title: "Use Cases", href: "" },
       {
         title: (
           <>
@@ -18,16 +18,18 @@ export const navigation = [
     ],
   },
   {
-    title: "Company",
+    title: "Follow Us",
     links: [
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Blog", href: "/blog" },
-      { title: "Contact us", href: "/contact" },
+      { title: "Facebook", href: "/about" },
+      { title: "Twitter", href: "/about" },
+      { title: "LinkedIn", href: "/process" },
     ],
   },
   {
-    title: "Connect",
-    links: SocialMediaProfiles,
+    title: "Legal",
+    links: [
+      { title: "Privacy", href: "/about" },
+      { title: "Terms", href: "/about" },
+    ],
   },
 ];

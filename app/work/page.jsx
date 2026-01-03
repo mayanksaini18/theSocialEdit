@@ -4,7 +4,7 @@ import React from "react";
 const WorkPage = () => {
   return (
     <>
-      <PageIntro
+      {/* <PageIntro
         eyebrow="Our work"
         title="Proven solutions for real-world problems."
       >
@@ -13,7 +13,7 @@ const WorkPage = () => {
           best value to our clients. The primary way we do that is by re-using
           the same five projects we’ve been developing for the past decade.
         </p>
-      </PageIntro>
+      </PageIntro> */}
     </>
   );
 };

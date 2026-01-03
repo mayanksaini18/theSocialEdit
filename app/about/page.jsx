@@ -30,7 +30,7 @@ const AboutPage = () => {
         </StatList>
       </Container>
       <Cultures />
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 };
