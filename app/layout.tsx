@@ -3,8 +3,8 @@ import "./globals.css";
 
 export const metadata = {
  title: {
-    template: "%s - Built X",
-    default: "Built X - Content Marketing, Web Solutions, & Brand Strategy",
+    template: "the Social Edit",
+    default: "Content Marketing, Web Solutions, & Brand Strategy",
   },
   description:
     "A premier content marketing agency delivering powerful brand strategy and bespoke web solutions to elevate your online presence.",
