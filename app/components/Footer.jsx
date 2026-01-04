@@ -61,11 +61,17 @@ const Footer = () => {
           </div>
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href={"/"} aria-label="Home">
-            <Logo className="h-8" fillOnHover>
-              THE SOCIAL EDIT
-            </Logo>
-          </Link>
+         <Link href="/" aria-label="Home" className="flex flex-col leading-none">
+          <span
+            className=
+              "text-xs italic tracking-wide text-black"
+          >
+            THE
+          </span>
+          <span className="text-2xl font-semibold italic text-yellow-500">
+            SOCIAL EDIT
+          </span>
+        </Link>
           <p className="text-sm text-neutral-700">&copy;  {new Date().getFullYear()} The Social Edit. All rights reserved.</p>
         </div>
       </FadeIn>

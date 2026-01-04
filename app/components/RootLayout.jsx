@@ -43,11 +43,12 @@ const Header = ({
         {/* Actions */}
         <div className="flex items-center gap-x-6">
           <Button
-            href="/contact"
-            className="bg-black text-white hover:bg-yellow-500 hover:text-black"
-          >
-            Contact us
-          </Button>
+  href="/contact"
+  className="bg-yellow-500 text-white transition-all duration-300 hover:scale-110  hover:shadow-lg"
+>
+  Contact us
+</Button>
+
 
           <button
             ref={toggleRef}
@@ -64,7 +65,7 @@ const Header = ({
             <Icon
               className={clsx(
                 "h-6 w-6",
-                invert ? "fill-white" : "fill-black"
+                invert ? "fill-yellow-500" : "fill-black"
               )}
             />
           </button>
@@ -76,7 +77,7 @@ const Header = ({
 
 const NavigationRow = ({ children }) => {
   return (
-    <div className="even:mt-px sm:bg-neutral-950">
+    <div className="even:mt-px sm:bg-black">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -162,13 +163,13 @@ const RootLayoutInner = ({ children }) => {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+        style={{ height: expanded ? "auto" : "0.5rem" }}
+        className="relative z-50 overflow-hidden bg-black pt-2"
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
         >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+        <motion.div layout className="bg-neutral-950">
+          <div ref={navRef} className="bg-black pb-16 pt-14">
               <Header
                 invert
                 panelId={panelId}
@@ -185,10 +186,10 @@ const RootLayoutInner = ({ children }) => {
             </div>
             {/* Navigation */}
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            <div className="relative bg-black before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-950">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
+                  {/* <div>
                     <h2 className="font-display text-base font-semibold text-white">
                       Our offices
                     </h2>
@@ -196,7 +197,7 @@ const RootLayoutInner = ({ children }) => {
                       invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
-                  </div>
+                  </div> */}
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
                       Follow us
