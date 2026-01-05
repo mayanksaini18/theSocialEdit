@@ -1,6 +1,6 @@
 export default function StickyLeft(){
   return (
-    <div className="lg:sticky lg:top-32 h-fit">
+    <div className="lg:sticky lg:top-32 ">
       <p className="text-sm text-neutral-500 mb-4">
         Digital marketing agency that are
       </p>
