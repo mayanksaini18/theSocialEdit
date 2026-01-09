@@ -19,11 +19,11 @@ export default function Home() {
             <span className="text-yellow-500">Web Solutions</span>.
           </h1>
 
-          <p className="mt-6 text-xl text-neutral-300">
+          {/* <p className="mt-6 text-xl text-neutral-300">
             We are a content marketing agency that partners with brands to
             deliver powerful brand strategy and bespoke web solutions, building
             an online presence that drives growth and engagement.
-          </p>
+          </p> */}
         </FadeIn>
       </Container>
 <ScrollCard/>
