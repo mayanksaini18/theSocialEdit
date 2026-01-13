@@ -16,7 +16,7 @@ const FadeIn = (props) => {
         initial: "hidden",
         whileInView: "visible",
         viewport,
-      };
+      }; 
 
   return (
     <motion.div
