@@ -5,8 +5,8 @@ export default function StickyLeft(){
         Digital marketing agency that are
       </p>
 
-      <h2 className="text-5xl sm:text-6xl font-medium text-neutral-900 leading-tight">
-        Jack of all traits,
+      <h2 className="font-display text-5xl sm:text-6xl font-medium text-neutral-950 leading-tight">
+        Jack of all trades,
         <br />
         master of results!
       </h2>
