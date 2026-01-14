@@ -6,6 +6,7 @@ import FadeIn from "@/app/components/FadeIn";
 import Services from "@/app/components/Services";
 import Testimonials from "@/app/components/Testimonials";
 import ScrollCard from "@/app/components/ScrollCard"
+import InnovationSection from "./components/InnovationSection";
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
           </p> 
         </FadeIn>
       </Container>
-<ScrollCard/>
 
+<InnovationSection/>
     </main>
   );
 }
