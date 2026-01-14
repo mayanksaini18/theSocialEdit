@@ -14,22 +14,16 @@ export default function MarketingSection() {
   });
 
   return (
-    <section ref={containerRef} className="relative h-[300vh] bg-white pt-5">
-      {/* The grid container is sticky. 
-        It stays locked to the viewport while we scroll through the 300vh height.
-      */}
-      <div className="sticky top-0 grid grid-cols-1 gap-10 overflow-hidden px-6 lg:grid-cols-2 lg:px-20">
-        
-        {/* LEFT COLUMN: Static Text */}
-        <div className="flex items-center justify-center">
-          <StickyLeft />
+    <section ref={containerRef} className="relative h-[300vh] bg-white">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <div className="grid w-full grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:px-20">
+          <div className="flex items-center justify-center">
+            <StickyLeft />
+          </div>
+          <div className="flex items-center justify-center">
+            <RightCards scrollYProgress={scrollYProgress} />
+          </div>
         </div>
-
-        {/* RIGHT COLUMN: Animated Cards */}
-        <div className="flex items-center justify-center">
-          <RightCards scrollYProgress={scrollYProgress} />
-        </div>
-        
       </div>
     </section>
   );
@@ -42,7 +36,7 @@ function StickyLeft() {
         Digital marketing agency that are
       </p>
 
-      <h2 className="text-5xl font-medium leading-tight text-neutral-900 sm:text-6xl">
+      <h2 className="font-display text-5xl font-medium leading-tight text-neutral-950 sm:text-6xl">
         Jack of all trades,
         <br />
         master of results!
