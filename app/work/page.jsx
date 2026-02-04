@@ -86,11 +86,11 @@ const WorkSection = () => {
       <div className="mx-auto max-w-5xl">
         
         {/* Main Section Header */}
-        <div className="mb-20 text-center">
+        <div className="mb-20">
           <h2 className="text-5xl font-black uppercase tracking-tighter md:text-7xl text-black">
-            Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-600">Work</span>
+            OURS <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-600">Work</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-500">
+          <p className="mt-4 max-w-2xl text-lg text-neutral-500">
             Real results for real brands. Here is how we translated their vision into viral content.
           </p>
         </div>
