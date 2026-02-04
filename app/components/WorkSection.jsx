@@ -1,5 +1,8 @@
 "use client"
 
+// import { Link } from "lucide-react";
+import Link from "next/link";
+
 const projects = [
   {
     id: 1,
@@ -62,10 +65,13 @@ const WorkSection = () => {
               A curation of our best edits. We turn raw footage into scrolling-stopping content for brands that dare to be different.
             </p>
           </div>
-
+        
+         <Link href="/work" >
+       
           <button className="hidden md:flex items-center gap-2 border-b border-white pb-1 text-sm font-bold uppercase tracking-widest text-white hover:text-yellow-500 hover:border-yellow-500 transition-colors">
             View All Projects
           </button>
+       </Link>
         </div>
 
         {/* Grid */}
