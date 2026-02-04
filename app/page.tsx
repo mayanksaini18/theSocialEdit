@@ -5,6 +5,7 @@ import InnovationSection from "@/app/components/InnovationSection";
 import HeroSection from "./components/HeroSection";
 import FaqSection from "./components/FaqSection";
 import WorkSection from "./components/WorkSection";
+import ValueSection from "./components/Valuesection";
 export default function Home() {
   return (
     <main className="text-neutral-100">
@@ -12,7 +13,9 @@ export default function Home() {
       <ScrollCard />
       <InnovationSection />
       <WorkSection/>
-      <FaqSection/>
+    
+      <ValueSection/>
+        <FaqSection/>
     </main>
   );
 }
