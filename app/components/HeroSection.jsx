@@ -23,18 +23,18 @@ const HeroSection = () => {
 
         {/* Subtext - Replicating the "Strategic solutions" text */}
         <p className="max-w-xl text-lg font-medium text-neutral-600 md:text-xl">
-          Presence for startups and creators—built from day one.”
+          Presence for  startups and creators—built from  <span className="underline decoration-wavy decoration-amber-500"> day one.</span>”
         </p>
 
         {/* CTAs using Shadcn styling */}
-        <div className="mt-10 flex items-center gap-4">
+        {/* <div className="mt-10 flex items-center gap-4">
         <button className="rounded-full bg-black px-6 py-3 text-white transition hover:bg-neutral-800">
           Our Work.
         </button>
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 text-black transition hover:scale-110 cursor-pointer">
           ↗
         </span>
-      </div>
+        <div/> */}
       </div>
     </section>
   );
