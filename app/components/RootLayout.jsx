@@ -22,7 +22,7 @@ const Header = ({
 }) => {
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="flex  justify-between">
         {/* Logo */}
         <Link href="/" aria-label="Home" className="flex flex-col leading-none">
           <span
