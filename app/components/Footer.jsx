@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="flex flex-col gap-10">
               <div>
-                <h2 className="font-display text-4xl font-bold tracking-wider text-neutral-950">
+                <h2 className="font-display text-6xl font-bold tracking-wider text-neutral-950">
                   IDEA? <br /> STOP THINKING. <br /> START GROWING.
                 </h2>
                 <Link
@@ -66,7 +66,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <FooterNavigation />
+            {/* <FooterNavigation /> */}
           </div>
           <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
             <Link
