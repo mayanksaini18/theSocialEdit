@@ -19,7 +19,7 @@ export default function InnovationSection() {
                 we do, we check, we repeat…
               </p>
 
-              <button className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-2 font-medium text-black transition hover:bg-yellow-300">
+              <button className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-4 py-2  mt-2 font-medium text-black transition hover:bg-yellow-300">
                 Know More <span>→</span>
               </button>
             </FadeIn>
@@ -40,11 +40,13 @@ export default function InnovationSection() {
         {/* SHOW-OFF CARDS */}
         <FadeInStagger className="mt-24">
           <dl className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            <Stat value="200+" label="Clients Served" />
-            <Stat value="DesignRush" label="Best Web Design Award" />
-            <Stat value="300+" label="Projects Completed" />
+            <Stat value="100+" label="Clients Served" />
+            {/* <Stat value="DesignRush" label="Best Web Design Award" /> */}
+            <Stat value="100+" label="Projects Completed" />
             <Stat value="4.8" label="Rated on Google" />
+            <Stat value="2M+" label="Views" />
           </dl>
+
         </FadeInStagger>
 
         {/* BOTTOM CTA */}
