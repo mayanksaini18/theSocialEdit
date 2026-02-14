@@ -47,7 +47,9 @@ const Header = ({
   className="bg-yellow-500 text-white transition-all duration-300 hover:scale-110  hover:shadow-lg"
 >
   <Link
-  href="https://wa.me/918789006780"
+  // href="https://wa.me/918789006780"
+  href="https://wa.me/918789006780?text=Hi%20Social%20Edit%2C%20I%20want%20to%20know%20more%20about%20your%20video%20editing%20services."
+
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center justify-center rounded-full p-2"
