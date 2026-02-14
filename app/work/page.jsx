@@ -26,7 +26,7 @@ const clients = [
   },
   {
     id: "org2",
-    name: "Tesora",
+    name: "Texora",
     reels: [
       {
         id: 4,
