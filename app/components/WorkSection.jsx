@@ -15,7 +15,7 @@ const projects = [
   videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771104002/Harsh_ad_2_coshkl.mp4"
 },{
   id: 3,
-  videoUrl:"https://res.cloudinary.com/ddpydxytb/video/upload/v1770195674/Day_7_new_vqmepm.mp4"
+  videoUrl:"https://res.cloudinary.com/ddpydxytb/video/upload/v1771103261/AQM7ykwBeGggukodVwX7mCFs8Rw1XsFmr05CaMeJsdG6gPRbkd14fBDe110HhGKY16yyiootD9xK0Yv8xYGbdbHE48R1gkR19bVlr20_zs3eu5.mp4"
 }
 
 
