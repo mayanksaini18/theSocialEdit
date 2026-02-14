@@ -6,50 +6,67 @@ const clients = [
   {
     id: "org1",
     name: "Apex Fashion Labs",
-    description: "Rebranding their social presence with high-energy cafe lifestyle edits.",
-    logo: "☕",
     reels: [
       {
         id: 1,
-        title: "Morning Routine",
-        // Note: Ensure this is a valid video URL (mp4/webm)
+        
         videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1770195512/0201_ywugzt.mp4", 
       },
       {
         id: 2,
-        title: "Latte Art Showcase",
-        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1770195674/Day_7_new_vqmepm.mp4"
+       
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102817/AQMaqkSlIJglkaHgOvF7WF8cr3W2M16SAQgFeLB_ws5xNnI9M8rDDCMqLeQ4hYatPKDNEk7LHOIDKKv21KwSqe7eY2HKqZKFj0g9jWQ_h9xuxs.mp4"
       },
       {
         id: 3,
-        title: "Customer Testimonials",
-        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1770195674/Day_7_new_vqmepm.mp4",
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102810/AQM-jJ_DyINUoPkNLTcfUeC0rLtgw9FVryaUo0Syma3PssPtWHNNpCEmoLROdsd7hnYVvWrGOsDwooVylxsyojBZYie62zxACSvRSLU_mhybl2.mp4",
       }
     ]
   },
   {
     id: "org2",
     name: "Tesora",
-    description: "Driving membership signups through intense, fast-paced workout montages.",
-    logo: "⚡",
     reels: [
       {
         id: 4,
-        title: "HIIT Intensity",
-        videoUrl: "https://res.cloudinary.com/demo/video/upload/v1679668474/dog_closeup_ns.mp4",
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102550/AQNrTtbSgXcXDyxkttZ6mwNvYbs5Ab87YAVMXGT2AgBgDC8DwlU2DOKRiHPB2fqLzZiYETZ5Sh8iWdXcVhRxExKvBUEpE_IXHpNyuaw_wnuycz.mp4",
       },
       {
         id: 5,
-        title: "Trainer Spotlight",
-        videoUrl: "https://res.cloudinary.com/demo/video/upload/v1679668474/dog_closeup_ns.mp4",
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102550/AQOp7flNESmyG24KXwenex7h5DDaQ0-0DE-TnKvmoM2Ac9BfEa5qzziLMscxxnaHwODp915MKp_tv-vPRqMHAKCn7zq5S2edo7XdEWM_gadksk.mp4",
       },
       {
         id: 6,
-        title: "Member Transformation",
-        videoUrl: "https://res.cloudinary.com/demo/video/upload/v1679668474/dog_closeup_ns.mp4",
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771103260/AQM6Es1fros1oDxEK75YWx09AT4D9fA4NN2NxWwxVu14Yy6K4_bZ9bDnPoOnGohyTyBht0fJjkpt6-k8mCFTGsB-e_ZI3dm1cPc-eQM_hlua8r.mp4",
       }
     ]
-  }
+  },
+  {
+    id: "org3",
+    name: "Xperio",
+    reels: [
+      {
+        id: 4,
+       
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102676/AQNDp3Sr0cwNSt14ZAcyQvbZ0zWpIGv6E9mq72ldMSXj_bQc0BFoBZ60iKTrH4R_Qdzl1O3JHzRlO68UtKJ57K9LGZNbP_eq7phMzXY_ephj4j.mp4",
+      },
+      {
+        id: 5,
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102674/AQNh_2fJ8_J46bbE6E510hQ3S0hV3rskzlcF4ypwxk4UkQMGtNPgYK1836fO9VYZeISQJ2JY62nAYiuMaB5khvEXopahgFWL_Fwj1IE_i7mvpg.mp4",
+      },
+      {
+        id: 6,
+        
+        videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771102672/AQMgWnPzdCjgObjB10ieOaiK612_xRXXgGBUvmrYZep2YE4AwHLR5uD14gHo16s7nrgW1zOmlWKiETYGlt3XDa0VUYZTYVwLDeqia9Y_k5hzdo.mp4",
+      }
+    ]
+  },
+  
 ];
 
 // --- COMPONENT ---
@@ -82,7 +99,7 @@ const ReelCard = ({ reel }) => {
 
 const WorkSection = () => {
   return (
-    <section className="bg-white py-24 px-4 text-neutral-900">
+    <section className="bg-white py-24 px-10 text-neutral-900">
       <div className="mx-auto max-w-5xl">
         
         {/* Main Section Header */}
