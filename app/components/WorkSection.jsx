@@ -5,46 +5,46 @@ import Link from "next/link";
 
 const projects = [
   {
-    id: 1,
-    client: "Urban Brew",
-    category: "Brand Identity",
-    video: "/videos/anonimostory.com_Instagram_apexfashionlab_3797574884055199598_66309954011.mp4",
-  },
-  {
-    id: 2,
-    client: "Neon Fitness",
-    category: "Reels Production",
-    video: "/videos/anonimostory.com_Instagram_texoraai_3752660752579505381_75733704479 (2).mp4",
-  },
-  {
-    id: 3,
-    client: "Tech Nova",
-    category: "Product Launch",
-    video: "videos/Video-769.mp4",
+     reels: [
+      {
+  id: 1,
+  videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771104411/personal_1_prdduq.mp4"
+},
+      {
+  id: 2,
+  videoUrl: "https://res.cloudinary.com/ddpydxytb/video/upload/v1771104002/Harsh_ad_2_coshkl.mp4"
+},{
+  id: 3,
+  videoUrl:"https://res.cloudinary.com/ddpydxytb/video/upload/v1770195674/Day_7_new_vqmepm.mp4"
+}
+
+
+    ]
   },
 ];
 
-const VideoCard = ({ project }) => {
+const ReelCard = ({ reel }) => {
   return (
     <div className="group relative flex flex-col gap-3">
-      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl bg-neutral-900 shadow-xl">
+      {/* 9:16 Aspect Ratio Container */}
+      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-xl bg-gray-100 border border-neutral-200 shadow-sm transition-all duration-300 group-hover:border-yellow-500/50 group-hover:shadow-lg">
         
         <video
-          src={project.video}
-          muted
+          src={reel.videoUrl}
           autoPlay
           loop
-          playsInline
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          muted             // Always muted (required for reliable autoplay)
+          playsInline       // Required for iOS
+          className="h-full w-full object-cover"
         />
-      </div>
 
-      <div className="flex items-start justify-between px-1">
-        <div>
-          <h3 className="text-xl font-bold text-white">{project.client}</h3>
-          <p className="text-sm font-medium text-neutral-400">{project.category}</p>
-        </div>
+        {/* No Controller / No Overlay */}
       </div>
+      
+      {/* Reel Title */}
+      <p className="text-sm font-semibold text-neutral-500 transition-colors group-hover:text-black">
+        {reel.title}
+      </p>
     </div>
   );
 };
@@ -54,7 +54,6 @@ const WorkSection = () => {
   return (
     <section className=" py-6 bg-neutral-950">
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-2xl">
@@ -76,10 +75,13 @@ const WorkSection = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <VideoCard key={project.id} project={project} />
-          ))}
-        </div>
+  {projects.flatMap((project) =>
+    project.reels.map((reel) => (
+      <ReelCard key={reel.id} reel={reel} />
+    ))
+  )}
+</div>
+
 
         {/* Mobile Button */}
         <div className="mt-12 flex justify-center md:hidden">
