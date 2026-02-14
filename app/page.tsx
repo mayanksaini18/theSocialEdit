@@ -13,7 +13,6 @@ export default function Home() {
       <ScrollCard />
       <InnovationSection />
       <WorkSection/>
-    
       <ValueSection/>
         <FaqSection/>
     </main>
