@@ -10,6 +10,8 @@ import Button from "@/app/components/Button";
 import clsx from "clsx";
 import SocialMedia from "@/app/components/SocialMedia";
 import Footer from "@/app/components/Footer";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 
 const Header = ({
@@ -41,10 +43,19 @@ const Header = ({
         {/* Actions */}
         <div className="flex items-center gap-x-6">
           <Button
-  href="/contact"
+ 
   className="bg-yellow-500 text-white transition-all duration-300 hover:scale-110  hover:shadow-lg"
 >
-  Contact us
+  <Link
+  href="https://wa.me/918789006780"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center rounded-full p-2"
+>
+   Contact us
+</Link>
+
+ 
 </Button>
 
 
